@@ -1,0 +1,16 @@
+float16 axis1
+float16 axis2
+float16 axis3
+float16 axis4
+int b0
+int b1
+int b2
+int b3
+int b4
+int b5
+int b6
+int b7
+int b8
+int b9
+int b10
+int b11
