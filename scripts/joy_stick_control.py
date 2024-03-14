@@ -1,14 +1,13 @@
 #!/usr/bin/env python
 
 import rospy
-from std_msgs.msg import String
-from joystick_control.msg import Comamnd
+from joystick_control.msg import Command
 import pygame
 
 
 def joystick_publisher():
     rospy.init_node('joystick_node', anonymous=True)
-    pub = rospy.Publisher('command', Position, que_size=10)
+    pub = rospy.Publisher('command', Command, queue_size=10)
     rate = rospy.Rate(10)
 
     # Initialize pygame

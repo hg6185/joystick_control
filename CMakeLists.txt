@@ -69,7 +69,7 @@ add_message_files(
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
   DEPENDENCIES
-  std_msgs  # Or other packages containing msgs
+  std_msgs 
 )
 
 ################################################
@@ -104,8 +104,11 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES joystick_control
-#  CATKIN_DEPENDS rospy
+#  CATKIN_DEPENDS other_catkin_pkg
 #  DEPENDS system_lib
+)
+catkin_install_python(PROGRAMS scripts/joy_stick_control.py
+    DESTINATION $(CATKIN_PACKAGE_BIN_DESTINATION)
 )
 
 ###########
@@ -116,7 +119,7 @@ catkin_package(
 ## Your package locations should be listed before other locations
 include_directories(
 # include
-  ${catkin_INCLUDE_DIRS}
+    ${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
